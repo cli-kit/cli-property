@@ -13,6 +13,15 @@ describe('cli-property:', function() {
     done();
   });
 
+  it('should expand object keys on regexp', function(done) {
+    var ptn = 'field.deep.num';
+    var expected = {field: {deep: {num: 10}}};
+    var o = {};
+    o[ptn] = 10;
+    var res = expand(o, {re: /\./});
+    expect(res).to.eql(expected);
+    done();
+  });
 
   it('should expand on no delimiter', function(done) {
     var ptn = 'field.deep.num';
