@@ -23,7 +23,7 @@
     "find"
   ],
   "dependencies": {
-    "cli-regexp": "0.0.1"
+    "cli-regexp": "0.0.2"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
